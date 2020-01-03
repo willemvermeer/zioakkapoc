@@ -1,16 +1,12 @@
 package com.example
 
-import com.example.UserRegistry.ActionPerformed
+import com.example.Domain.User
 
-//#json-formats
 import spray.json.DefaultJsonProtocol
 
 object JsonFormats  {
-  // import the default encoders for primitive types (Int, String, Lists etc)
   import DefaultJsonProtocol._
 
-  implicit val userJsonFormat = jsonFormat3(User)
-  implicit val usersJsonFormat = jsonFormat1(Users)
+  implicit val userJsonFormat = jsonFormat2(User)
 
-  implicit val actionPerformedJsonFormat = jsonFormat1(ActionPerformed)
 }

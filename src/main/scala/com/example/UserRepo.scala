@@ -18,7 +18,7 @@ trait UserRepoLive extends UserRepo {
       if (id == 7)
         User(id, "willem")
       else if (id == 1)
-        User(id, "Saskia")
+        User(id, "virgil")
       else User(id, "unknown")
     }
   }
