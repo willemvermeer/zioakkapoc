@@ -36,7 +36,7 @@ class UserRoutes(env: UserRepo) extends DefaultRuntime {
       pathPrefix("repo") {
         path(Segment) { id =>
           get {
-            val user = ZIO.accessM[UserRepo](_.userRepo.find(id.toInt)).provide(env)
+            val user = userrepo.find(id.toInt).provide(env)
             val y = unsafeRun(user)
             complete(y)
           }
